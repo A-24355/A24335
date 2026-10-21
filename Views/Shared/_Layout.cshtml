@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AMX K</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="barra">
+        <nav class="menu">
+            <a asp-controller="Categoria" asp-action="Ver" asp-route-slug="hombre">HOMBRE</a>
+            <a asp-controller="Categoria" asp-action="Ver" asp-route-slug="mujer">MUJER</a>
+            <a asp-controller="Categoria" asp-action="Ver" asp-route-slug="ninos">NIÑOS</a>
+            <a asp-controller="Home" asp-action="Contacto">CONTACTO</a>
+        </nav>
+        <form class="buscador" asp-controller="Home" asp-action="Buscar" method="get">
+            <input type="text" name="q" placeholder="BUSCAR" aria-label="Buscar productos" />
+            <button type="submit" aria-label="Buscar">&#128269;</button>
+        </form>
+    </header>
+
+    @RenderBody()
+
+    <footer class="pie">
+        <div class="pie-columnas">
+            <div>
+                <h4>CONTÁCTANOS AL:</h4>
+                <p>961 000 0000</p>
+            </div>
+            <div>
+                <h4>SÍGUENOS EN</h4>
+                <p class="redes">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">YouTube</a>
+                </p>
+            </div>
+        </div>
+        <p class="creditos">ELABORADO POR KAROL ALBERTO GALDÁMEZ GÓMEZ | LSC 2026</p>
+    </footer>
+</body>
+</html>

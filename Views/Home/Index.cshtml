@@ -1,0 +1,35 @@
+@{
+    ViewData["Title"] = "Inicio";
+    var masVendidos = (List<Producto>)ViewBag.MasVendidos;
+    var rebajas = (List<Producto>)ViewBag.Rebajas;
+}
+
+<section class="hero">
+    <h1>AMX K</h1>
+    <p>ROPA MEXICANA DE ALTA CALIDAD, A LA MODA, CON ESTILO Y A TU ALCANCE</p>
+</section>
+
+<section class="mosaicos">
+    <a class="mosaico camisas" asp-controller="Home" asp-action="Buscar" asp-route-tipo="Camisas"><span>CAMISAS</span></a>
+    <a class="mosaico sudaderas" asp-controller="Home" asp-action="Buscar" asp-route-tipo="Sudaderas"><span>SUDADERAS</span></a>
+    <a class="mosaico pantalones" asp-controller="Home" asp-action="Buscar" asp-route-tipo="Pantalones"><span>PANTALONES</span></a>
+    <a class="mosaico accesorios" asp-controller="Home" asp-action="Buscar" asp-route-tipo="Accesorios"><span>ACCESORIOS</span></a>
+</section>
+
+<section class="bloque">
+    <div class="bloque-titulo"><h2 class="etiqueta negra">LO MÁS VENDIDO</h2></div>
+    <a class="btn-anadir" asp-controller="Productos" asp-action="Crear" asp-route-masVendido="true">Añadir productos</a>
+    <div class="rejilla">
+        @foreach (var p in masVendidos) { <partial name="_ProductoCard" model="p" /> }
+        @if (!masVendidos.Any()) { <p class="vacio">Aún no hay productos. Usa “Añadir productos”.</p> }
+    </div>
+</section>
+
+<section class="bloque">
+    <div class="bloque-titulo"><h2 class="etiqueta roja">REBAJAS</h2></div>
+    <a class="btn-anadir" asp-controller="Productos" asp-action="Crear">Añadir productos</a>
+    <div class="rejilla">
+        @foreach (var p in rebajas) { <partial name="_ProductoCard" model="p" /> }
+        @if (!rebajas.Any()) { <p class="vacio">No hay rebajas por ahora.</p> }
+    </div>
+</section>

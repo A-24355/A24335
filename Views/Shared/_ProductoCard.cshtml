@@ -1,0 +1,29 @@
+@model Producto
+@{
+    var enRebaja = Model.PrecioRebaja != null;
+    var slug = Model.Categoria?.Slug ?? "";
+}
+<article class="producto">
+    <div class="producto-img"
+         style="@(string.IsNullOrEmpty(Model.ImagenUrl) ? "" : $"background-image:url('{Model.ImagenUrl}')")">
+    </div>
+    <div class="producto-info">
+        <p class="precio">
+            @if (enRebaja)
+            {
+                <span>$@Model.PrecioRebaja?.ToString("N2")</span>
+                <s>$@Model.Precio.ToString("N2")</s>
+            }
+            else
+            {
+                <span>$@Model.Precio.ToString("N2")</span>
+            }
+        </p>
+        <h3>@Model.Nombre</h3>
+        <p class="desc">@Model.Descripcion</p>
+        @if (Model.Categoria != null)
+        {
+            <a class="cat" asp-controller="Categoria" asp-action="Ver" asp-route-slug="@slug">@Model.Categoria.Nombre.ToUpper()</a>
+        }
+    </div>
+</article>

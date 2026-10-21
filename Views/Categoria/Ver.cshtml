@@ -1,0 +1,13 @@
+@model Categoria
+@{ ViewData["Title"] = Model.Nombre; }
+<section class="pagina">
+    <h1 class="titulo-pagina">@Model.Nombre.ToUpper()</h1>
+    <div class="rejilla">
+        @foreach (var p in Model.Productos.OrderBy(p => p.Nombre))
+        {
+            p.Categoria = Model;
+            <partial name="_ProductoCard" model="p" />
+        }
+        @if (!Model.Productos.Any()) { <p class="vacio">Aún no hay productos en esta categoría.</p> }
+    </div>
+</section>

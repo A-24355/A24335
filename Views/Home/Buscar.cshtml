@@ -1,0 +1,9 @@
+@model List<Producto>
+@{ ViewData["Title"] = "Búsqueda"; }
+<section class="pagina">
+    <h1 class="titulo-pagina">@ViewBag.Titulo</h1>
+    <div class="rejilla">
+        @foreach (var p in Model) { <partial name="_ProductoCard" model="p" /> }
+        @if (!Model.Any()) { <p class="vacio">No encontramos productos con ese criterio.</p> }
+    </div>
+</section>
