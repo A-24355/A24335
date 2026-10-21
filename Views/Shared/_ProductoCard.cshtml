@@ -25,5 +25,11 @@
         {
             <a class="cat" asp-controller="Categoria" asp-action="Ver" asp-route-slug="@slug">@Model.Categoria.Nombre.ToUpper()</a>
         }
+<form asp-controller="Productos" asp-action="Eliminar" asp-route-id="@Model.Id" method="post"
+      onsubmit="return confirm('¿Eliminar &quot;@Model.Nombre&quot;? Esta acción no se puede deshacer.');">
+    <button type="submit" class="btn-eliminar">Eliminar</button>
+</form>
     </div>
+
+    
 </article>

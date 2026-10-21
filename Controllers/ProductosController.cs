@@ -37,6 +37,20 @@ public class ProductosController : Controller
 
         return RedirectToAction("Index", "Home");
     }
+[HttpPost]
+[ValidateAntiForgeryToken]
+public async Task<IActionResult> Eliminar(Guid id)
+{
+    var producto = await _context.Productos.FindAsync(id);
+
+    if (producto != null)
+    {
+        _context.Productos.Remove(producto);
+        await _context.SaveChangesAsync();
+    }
+
+    return RedirectToAction("Index", "Home");
+}
 
     private async Task CargarListas()
     {

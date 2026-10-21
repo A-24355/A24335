@@ -24,7 +24,7 @@ a { color: inherit; }
 
 /* Hero (pon una foto en wwwroot/img/hero.jpg) */
 .hero { padding: 5rem 8% 6rem; color: #fff;
-        background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.7)), url('/img/hero.jpg') center/cover, #2b2522; }
+        background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.7)), url('/img/Black.png') center/cover, #2b2522; }
 .hero h1 { font-family: var(--fuente-titulo); font-size: clamp(4rem, 12vw, 9rem); line-height: 1; margin: 0 0 1rem; font-weight: 700; }
 .hero p { font-family: var(--fuente-titulo); font-size: clamp(1.1rem, 2.4vw, 1.9rem); max-width: 48rem; margin: 0; }
 
@@ -33,10 +33,10 @@ a { color: inherit; }
 .mosaico { position: relative; aspect-ratio: 9 / 14; display: flex; align-items: flex-end; justify-content: center;
            text-decoration: none; color: #fff; box-shadow: 0 12px 30px rgba(0,0,0,.18); background-size: cover; background-position: center; }
 .mosaico span { font-family: var(--fuente-titulo); font-size: 2.2rem; font-weight: 700; padding-bottom: 1.2rem; text-shadow: 0 2px 6px rgba(0,0,0,.7); }
-.mosaico.camisas    { background-image: url('/img/camisas.jpg'),    linear-gradient(160deg,#9bb37a,#e9c9a6); }
-.mosaico.sudaderas  { background-image: url('/img/sudaderas.jpg'),  linear-gradient(160deg,#d9a79e,#f2d6cf); }
-.mosaico.pantalones { background-image: url('/img/pantalones.jpg'), linear-gradient(160deg,#6b4a38,#b99b88); }
-.mosaico.accesorios { background-image: url('/img/accesorios.jpg'), linear-gradient(160deg,#4d6b3a,#b34a3f); }
+.mosaico.camisas    { background-image: url('/img/BHBU.jpg'),    linear-gradient(160deg,#9bb37a,#e9c9a6); }
+.mosaico.sudaderas  { background-image: url('/img/P_009211896FM.webp'),  linear-gradient(160deg,#d9a79e,#f2d6cf); }
+.mosaico.pantalones { background-image: url('/img/HIGH-STREET-Pantalon-vestir-wide-leg-bpca-250143_01_b18aa064-eebd-48dc-a766-e8a929dc3297_900x.webp'), linear-gradient(160deg,#6b4a38,#b99b88); }
+.mosaico.accesorios { background-image: url('/img/images (3).jpg'), linear-gradient(160deg,#4d6b3a,#b34a3f); }
 
 /* Bloques */
 .bloque { position: relative; padding: 3rem 2% 2rem; }
@@ -84,3 +84,7 @@ a { color: inherit; }
     .bloque > .btn-anadir { position: static; display: block; width: max-content; margin: 0 auto 1rem; }
     .menu { gap: 1rem; }
 }
+
+.btn-eliminar { margin-top: .8rem; background: transparent; color: var(--rojo); border: 1px solid var(--rojo);
+                border-radius: 6px; padding: .3rem .8rem; font: inherit; font-size: .9rem; cursor: pointer; }
+.btn-eliminar:hover, .btn-eliminar:focus-visible { background: var(--rojo); color: #fff; }

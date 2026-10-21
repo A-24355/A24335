@@ -48,15 +48,15 @@ INSERT INTO dbo.Categorias (Nombre, Slug) VALUES
 GO
 
 INSERT INTO dbo.Productos (Nombre, Descripcion, Precio, PrecioRebaja, Tipo, Existencia, EsMasVendido, ImagenUrl, IdCategoria) VALUES
- ('Playera polo',      'Playera polo de alta calidad, 100% algodon', 399.59, NULL,   'Camisas',    25, 1, '/img/playera-polo.jpg', (SELECT Id FROM dbo.Categorias WHERE Slug='hombre')),
- ('Camisa de lino',    'Camisa de lino ligera, ideal para clima calido', 549.00, 449.00, 'Camisas',  15, 0, NULL, (SELECT Id FROM dbo.Categorias WHERE Slug='hombre')),
- ('Sudadera estampada','Sudadera blanca con estampado artesanal',   699.90, NULL,   'Sudaderas',  12, 1, NULL, (SELECT Id FROM dbo.Categorias WHERE Slug='hombre')),
- ('Gorra negra',       'Gorra bordada, ajustable',                   229.00, 179.00, 'Accesorios', 40, 0, NULL, (SELECT Id FROM dbo.Categorias WHERE Slug='hombre')),
- ('Blusa rayada',      'Blusa de rayas con lazo al cuello',          459.50, NULL,   'Camisas',    18, 1, NULL, (SELECT Id FROM dbo.Categorias WHERE Slug='mujer')),
- ('Pantalon de vestir','Pantalon cafe de corte amplio',              629.00, 529.00, 'Pantalones', 10, 0, NULL, (SELECT Id FROM dbo.Categorias WHERE Slug='mujer')),
- ('Sudadera oversize', 'Sudadera suave de felpa',                    649.00, NULL,   'Sudaderas',  14, 0, NULL, (SELECT Id FROM dbo.Categorias WHERE Slug='mujer')),
- ('Playera basica',    'Playera de algodon para nino',               189.00, NULL,   'Camisas',    30, 1, NULL, (SELECT Id FROM dbo.Categorias WHERE Slug='ninos')),
- ('Pantalon jogger',   'Jogger comodo para uso diario',              319.00, 259.00, 'Pantalones', 22, 0, NULL, (SELECT Id FROM dbo.Categorias WHERE Slug='ninos'));
+ ('Playera polo',      'Playera polo de alta calidad, 100% algodon', 399.59, NULL,   'Camisas',    25, 1, '/img/000001.webp', (SELECT Id FROM dbo.Categorias WHERE Slug='hombre')),
+ ('Camisa de lino',    'Camisa de lino ligera, ideal para clima calido', 549.00, 449.00, 'Camisas',  15, 0, '/img/000002.webp', (SELECT Id FROM dbo.Categorias WHERE Slug='hombre')),
+ ('Sudadera estampada','Sudadera con estampado artesanal',   699.90, NULL,   'Sudaderas',  12, 1, '/img/000003.webp', (SELECT Id FROM dbo.Categorias WHERE Slug='hombre')),
+ ('Gorra negra',       'Gorra bordada, ajustable',                   229.00, 179.00, 'Accesorios', 40, 0, '/img/00004.jpg', (SELECT Id FROM dbo.Categorias WHERE Slug='hombre')),
+ ('Blusa rayada',      'Blusa de rayas con lazo al cuello',          459.50, NULL,   'Camisas',    18, 1, '/img/000005.webp', (SELECT Id FROM dbo.Categorias WHERE Slug='mujer')),
+ ('Pantalon de vestir','Pantalon cafe de corte amplio',              629.00, 529.00, 'Pantalones', 10, 0, '/img/000006.webp', (SELECT Id FROM dbo.Categorias WHERE Slug='mujer')),
+ ('Sudadera oversize', 'Sudadera suave de felpa',                    649.00, NULL,   'Sudaderas',  14, 0, '/img/000007.jpg', (SELECT Id FROM dbo.Categorias WHERE Slug='mujer')),
+ ('Playera basica',    'Playera de algodon para nino',               189.00, NULL,   'Camisas',    30, 1, '/img/000007.webp', (SELECT Id FROM dbo.Categorias WHERE Slug='ninos')),
+ ('Pantalon jogger',   'Jogger comodo para uso diario',              319.00, 259.00, 'Pantalones', 22, 0, '/img/000008.webp', (SELECT Id FROM dbo.Categorias WHERE Slug='ninos'));
 GO
 
 SELECT c.Nombre AS Categoria, p.Nombre, p.Precio, p.Tipo
